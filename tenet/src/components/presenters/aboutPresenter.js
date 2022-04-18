@@ -1,15 +1,15 @@
-import Homepage from '../views/homepage';
+import Aboutpage from '../views/aboutpage';
 import Headertest from '../views/headerJTEST';
 import React from 'react';
 
-function HomepagePresenter(props){
+function AboutPresenter(props){
     return (
         <div>
             <Headertest/>
-            <Homepage/>
+            <Aboutpage/>
         </div>
     
         );
 }
 
-export default HomepagePresenter;
+export default AboutPresenter;

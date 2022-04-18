@@ -1,9 +1,13 @@
 import React from 'react';
+import '../css/style.css';
+
 function Homepage() {
 	return (
-		<div>
-			<h2>Decibel</h2>
+		<div className='homepage'>
+			<p> Group 11: Working progress... </p>
 		</div>
+		
+		
 	);
 }
 
