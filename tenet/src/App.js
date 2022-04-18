@@ -1,33 +1,24 @@
+import './App.css';
 import React from 'react';
-import {useState} from 'react';
-import db from './components/config/firebase';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
-  const [name , setName] = useState();
-  const [age , setAge] = useState();
-      
-  // Push Function
-  const Push = () => {
-    db.ref("user").set({
-      name : name,
-      age : age,
-    }).catch(alert);
-  }
-  
+import HomepagePresenter from './components/presenters/homepagePresenter';
+
+function App(props) {
+
+
   return (
-    <div className="App" style={{marginTop : 250}}>
-      <center>
-      <input placeholder="Enter your name" value={name} 
-      onChange={(e) => setName(e.target.value)}/>
-      <br/><br/>
-      <input placeholder="Enter your age" value={age} 
-      onChange={(e) => setAge(e.target.value)}/>
-      <br/><br/> 
-      <button onClick={Push}>PUSH</button>
-      </center>
+    
+  
+  <BrowserRouter>
+    <div className="flexParent">
+      <Routes>
+        <Route path="/home" element={<HomepagePresenter model={props.model} />} />
+        <Route path="/" element={<HomepagePresenter model={props.model} />} />
+      </Routes>
     </div>
-  );
+  </BrowserRouter>
+);
 }
   
 export default App;
