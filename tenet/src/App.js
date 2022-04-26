@@ -1,29 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import HomepagePresenter from './components/presenters/homepagePresenter';
+import InformationPresenter from './components/presenters/infopagePresenter';
+
+function App(props) {
 
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-
-          Group 11:  Work in progress.... 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
+  
+  <BrowserRouter>
+    <div className="flexParent">
+      <Routes>
+        <Route path="/home" element={<HomepagePresenter model={props.model} />} />
+        <Route path="/" element={<HomepagePresenter model={props.model} />} />
+        <Route path="/info" element={<InformationPresenter model={props.model} />} />
+      </Routes>
     </div>
-
-  );
+  </BrowserRouter>
+);
 }
-
+  
 export default App;
