@@ -1,12 +1,12 @@
 import Homepage from '../views/homepage';
-import firstHeader from '../views/firstHeader';
+import FirstHeader from '../views/firstHeader';
 import Footer from '../views/footer'
 import React from 'react';
 
 function HomepagePresenter(props){
     return (
         <div>
-            <firstHeader/>
+            <FirstHeader/>
             <Homepage/>
             <Footer/>
         </div>
