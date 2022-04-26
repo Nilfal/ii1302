@@ -3,11 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
 
-.header, .nav {
+.header {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
+    padding-bottom: 80px;
+    
 }
 
 .header {
@@ -41,7 +43,7 @@
 body{
     margin: 0;
     font-family: Helvetica;
-    background: url('../images/djthingy.jpg') top center no-repeat;
+    background: url('../images/speakers.jpg') top center no-repeat;
     background-size: cover;
     height: 100%;
     -webkit-background-size: cover;

@@ -4,15 +4,13 @@ import { FaInfo } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 
-
 import '../css/header.css';
-
 
 function Header() {
 	return (
 		<div className="header">
 			<div className="blah">
-				<button className="home">
+				<button className="homes">
 					<FaHome size="40px" />
 				</button>
 
@@ -26,10 +24,10 @@ function Header() {
 					<button className="contact">
 						<FaPhone size="30px" />
 					</button>
-					<button className="about">
+					<button className="abouts">
 						<MdGroups size="30px" />
 					</button>
-					<button className="info">
+					<button className="infos">
 						<FaInfo size="30px" />
 					</button>
 				</div>
