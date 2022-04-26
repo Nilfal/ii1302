@@ -1,0 +1,48 @@
+.header {
+	background-color: #191414;
+	display: flex;
+	flex-direction: row;
+	padding: 15px;
+}
+
+.blah {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #191414;
+	width: 100%;
+}
+
+.bleh {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+button {
+	background: transparent;
+	border: 0;
+	transition: transform 0.4s;
+}
+
+button:hover {
+	transform: rotate(30deg) scale(2);
+}
+
+.contact {
+	color: #2dbe10;
+}
+
+.about {
+	color: #c2bf16;
+}
+
+.info {
+	color: #1cc483;
+}
+
+.home {
+	color: #570524;
+}
+
+
