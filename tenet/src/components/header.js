@@ -1,20 +1,35 @@
 import react from 'react';
+import { FaHome } from 'react-icons/fa';
+import { FaInfo } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
+import { MdGroups } from 'react-icons/md';
+
 import './header.css';
 
 function Header() {
 	return (
 		<div className="header">
 			<div className="blah">
-				<div className="contact">
-					<h1>Contact us</h1>
-				</div>
+				<button className="home">
+					<FaHome size="40px" />
+				</button>
 
-				<div className="about">
-					<h1>About us</h1>
-				</div>
+				<div
+					style={{
+						flexGrow: 1,
+					}}
+				></div>
 
-				<div className="info">
-					<h1>More Info</h1>
+				<div className="bleh">
+					<button className="contact">
+						<FaPhone size="30px" />
+					</button>
+					<button className="about">
+						<MdGroups size="30px" />
+					</button>
+					<button className="info">
+						<FaInfo size="30px" />
+					</button>
 				</div>
 			</div>
 		</div>
