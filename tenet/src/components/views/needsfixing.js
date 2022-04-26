@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 function Homepage() {
   return (
     <section id="sec-1">
