@@ -1,9 +1,12 @@
-.header {
+.headers {
 	background-color: transparent;
 	display: flex;
 	flex-direction: row;
 	padding: 0px;
 	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	
 	
 }
 
@@ -34,7 +37,7 @@ button:hover {
 }
 
 .contact {
-	color: #b46e35;
+	color: #922626;
 	background-color: transparent;
 }
 

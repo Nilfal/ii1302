@@ -1,17 +1,21 @@
 import React from 'react';
-import { FaHome } from 'react-icons/fa';
+import { FaBlackberry, FaHome } from 'react-icons/fa';
 import { FaInfo } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
+import { ImStatsDots } from 'react-icons/im';
+import { Link } from 'react-router-dom';
 
 import '../css/header.css';
 
 function Header() {
 	return (
-		<div className="header">
+		<div className="headers">
 			<div className="blah">
 				<button className="homes">
-					<FaHome size="40px" />
+					<Link to="/Home">
+						<FaHome size="40px" color="#b46e35" />
+					</Link>
 				</button>
 
 				<div
@@ -21,14 +25,25 @@ function Header() {
 				></div>
 
 				<div className="bleh">
+					<button className="data">
+						<Link to="/data">
+							<ImStatsDots size="30px" color="#b46e35" />
+						</Link>
+					</button>
 					<button className="contact">
-						<FaPhone size="30px" />
+						<Link to="/Contact">
+							<FaPhone size="30px" color="#b46e35" />
+						</Link>
 					</button>
 					<button className="abouts">
-						<MdGroups size="30px" />
+						<Link to="/About Us">
+							<MdGroups size="30px" color="#b46e35" />
+						</Link>
 					</button>
 					<button className="infos">
-						<FaInfo size="30px" />
+						<Link to="/info">
+							<FaInfo size="30px" color="#b46e35" />
+						</Link>
 					</button>
 				</div>
 			</div>
