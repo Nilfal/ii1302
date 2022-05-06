@@ -7,6 +7,7 @@ import InformationPresenter from './components/presenters/infopagePresenter';
 import DataPresenter from './components/presenters/dataPresenter';
 
 function App(props) {
+
 	return (
 		<BrowserRouter>
 			<div className="flexParent">
