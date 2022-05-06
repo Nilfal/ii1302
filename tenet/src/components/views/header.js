@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBlackberry, FaHome } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { FaInfo } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
@@ -36,7 +36,7 @@ function Header() {
 						</Link>
 					</button>
 					<button className="abouts">
-						<Link to="/About Us">
+						<Link to="/about">
 							<MdGroups size="30px" color="#b46e35" />
 						</Link>
 					</button>

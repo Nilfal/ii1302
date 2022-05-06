@@ -10,17 +10,20 @@ export default class middleSection extends Component {
             <>
 	<div className='outer'>	
         <div id="home" className = 'home'>
+			<div className='logo'>
+
+			</div>
 			<div className='h1'>
           		<h1> How loud is too loud?
 		  		</h1>
-				  <section id='section05' className='demo'>
-			    	<Link to = "about" spy={true} smooth={true}><span></span>Read More</Link>
+				  <section id='section07' className='demo'>
+			    	<Link to = "about" spy={true} smooth={true}><span></span><span></span><span></span></Link>
 				</section>
 		  	</div>
         </div>
         
         <div id="about" className='about'>
-    		<img src={DBimage} alt='Different noise levels'/> 
+    		<img src={DBimage} alt='Different noise levels' className='img'/> 
 			<div className='text'>
 				<p>
 				We have all been there, a loud and busy classroom with chatters everywhere, laughter 
