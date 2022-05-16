@@ -3,8 +3,11 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import HomepagePresenter from './components/presenters/homepagePresenter';
-import InformationPresenter from './components/presenters/infopagePresenter';
+import InfoPresenter from './components/presenters/InfoPresenter';
 import DataPresenter from './components/presenters/dataPresenter';
+import ChatbotPresenter from './components/presenters/ChatbotPresenter';
+import ContactPresenter from './components/presenters/ContactPresenter';
+import MemberPresenter from './components/presenters/MemberPresenter';
 
 function App(props) {
 	return (
@@ -16,12 +19,24 @@ function App(props) {
 						element={<HomepagePresenter model={props.model} />}
 					/>
 					<Route path="/" element={<HomepagePresenter model={props.model} />} />
-					<Route
-						path="/info"
-						element={<InformationPresenter model={props.model} />}
-					/>
+					<Route path="/info" element={<InfoPresenter model={props.model} />} />
 
 					<Route path="/data" element={<DataPresenter model={props.model} />} />
+
+					<Route
+						path="/chatbot"
+						element={<ChatbotPresenter model={props.model} />}
+					/>
+
+					<Route
+						path="/contact"
+						element={<ContactPresenter model={props.model} />}
+					/>
+
+					<Route
+						path="/member"
+						element={<MemberPresenter model={props.model} />}
+					/>
 				</Routes>
 			</div>
 		</BrowserRouter>

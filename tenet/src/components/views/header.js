@@ -5,6 +5,7 @@ import { FaPhone } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import { ImStatsDots } from 'react-icons/im';
 import { Link } from 'react-router-dom';
+import { AiOutlineWechat } from 'react-icons/ai';
 
 import '../css/header.css';
 
@@ -36,13 +37,18 @@ function Header() {
 						</Link>
 					</button>
 					<button className="abouts">
-						<Link to="/About Us">
+						<Link to="/member">
 							<MdGroups size="30px" color="#b46e35" />
 						</Link>
 					</button>
 					<button className="infos">
 						<Link to="/info">
 							<FaInfo size="30px" color="#b46e35" />
+						</Link>
+					</button>
+					<button className="chatt">
+						<Link to="/chatbot">
+							<AiOutlineWechat size="40px" color="#b46e35" />
 						</Link>
 					</button>
 				</div>
