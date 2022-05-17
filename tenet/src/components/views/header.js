@@ -7,16 +7,17 @@ import { ImStatsDots } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 
 import '../css/header.css';
+import ConfettiButton from '../ConfettiButton';
 
 function Header() {
 	return (
 		<div className="headers">
 			<div className="blah">
-				<button className="homes">
+				<ConfettiButton className="homes">
 					<Link to="/Home">
 						<FaHome size="40px" color="#b46e35" />
 					</Link>
-				</button>
+				</ConfettiButton>
 
 				<div
 					style={{
@@ -25,26 +26,26 @@ function Header() {
 				></div>
 
 				<div className="bleh">
-					<button className="data">
+					<ConfettiButton className="data">
 						<Link to="/data">
 							<ImStatsDots size="30px" color="#b46e35" />
 						</Link>
-					</button>
-					<button className="contact">
+					</ConfettiButton>
+					<ConfettiButton className="contact">
 						<Link to="/Contact">
 							<FaPhone size="30px" color="#b46e35" />
 						</Link>
-					</button>
-					<button className="abouts">
-						<Link to="/about">
+					</ConfettiButton>
+					<ConfettiButton className="abouts">
+						<Link to="/member">
 							<MdGroups size="30px" color="#b46e35" />
 						</Link>
-					</button>
-					<button className="infos">
+					</ConfettiButton>
+					<ConfettiButton className="infos">
 						<Link to="/info">
 							<FaInfo size="30px" color="#b46e35" />
 						</Link>
-					</button>
+					</ConfettiButton>
 				</div>
 			</div>
 		</div>
