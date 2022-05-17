@@ -56,10 +56,10 @@ function Information() {
 				<p>More info about the research behind the project here:</p>
 				<ul>
 					<li>
-						The swedish work enviroment authority: <a href= "https://www.av.se/halsa-och-sakerhet/buller/fragor-och-svar-om-buller2/#5"></a>
+						 <a class="link" href= "https://www.av.se/halsa-och-sakerhet/buller/fragor-och-svar-om-buller2/#5">The swedish work enviroment authority:</a>
 					</li>
 					<li>
-						Student health report: <a href= "https://www.elevhalsoportalen.se/skola/halsoomraden/buller/"></a>
+						 <a class="link" href= "https://www.elevhalsoportalen.se/skola/halsoomraden/buller/">Student health report:</a>
 					</li>
 				</ul>
 			</div>
