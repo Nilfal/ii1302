@@ -1,8 +1,24 @@
 .info{
     text-align: center;
     color: white;
-    background-color: black;
+    background-color: rgb(243, 241, 241);
     opacity: 0.8;
+    
+}
+.test{
+    background-color: aliceblue;
 }
 
+.canvas{
+    background-color: antiquewhite;
+}
 /* https://www.w3schools.com/howto/howto_css_about_page.asp */
+
+.chart-wrapper, canvas {
+    margin: auto;
+    max-width: 1200px;
+  }
+  
+  .chart-wrapper {
+    margin-top: 50px;
+  }
