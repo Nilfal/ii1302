@@ -5,7 +5,7 @@ import '../css/informationpage.css';
 function Information() {
 	return (
 		<div className='info'>
-			<p> Group 11: Working progress... </p>
+			<p> haha </p>
 		</div>
 	);
 }
