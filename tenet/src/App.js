@@ -9,6 +9,7 @@ import ContactPresenter from './components/presenters/ContactPresenter';
 import MemberPresenter from './components/presenters/MemberPresenter';
 
 function App(props) {
+
 	return (
 		<BrowserRouter>
 			<div className="flexParent">

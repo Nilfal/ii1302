@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBlackberry, FaHome } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { FaInfo } from 'react-icons/fa';
 import { FaPhone } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';

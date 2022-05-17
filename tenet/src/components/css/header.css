@@ -94,4 +94,18 @@ button:hover {
 }
 
 .button:focus { outline: 0; }
+@media all and (min-width: 600px) {
+    .headers, .homes, .abouts, .contact, .button, .blah, .bleh{
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+@media all and (min-width: 1030px) {
+    .headers, .homes, .abouts, .contact, .button, .blah, .bleh {
+    -webkit-flex: none;
+    flex: none;
+    }
+}
+
 
