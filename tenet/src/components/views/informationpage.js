@@ -6,9 +6,7 @@ function Information() {
 	return (
 		<div className='info'>
 			<a href={"https://www.kth.se/student/kurser/kurs/II1302"}><div>
-				<p>Allt i denna kurs bakas in i projektet där arbetstiden är 180h-200h per student (nominell kurstid) eller mer om man vill och behöver.
-
-Eklund (projektboken från ingenjörsmetodiken) definierar följande mål i ett projekt:</p>
+				<p>II1302 Projekt och projektmetoder, kursens krav: </p>
 			<ul>
 				<li>
 				Effektmål 
@@ -38,12 +36,35 @@ Eklund (projektboken från ingenjörsmetodiken) definierar följande mål i ett 
 				</li>
 			</ul>
 			</div></a>
+			<a>
 			<div>
-				<p>2</p>
+				<p>Project background:</p>
+				<ul>
+					
+					The sound level in classrooms do not often lead to longterm damage to the auditory canals 
+					but will have bad consequences to the learning ability and concentration. In project 
+					group 11, we are all students and therefore well aware of this phenomenom. We have created this product 
+					as a way of collecting data as well as ensuring the quality of our working enviroment in lecture halls
+					for teachers and students on campus Kista.  
+					
+				</ul>
+
 			</div>
+			</a>
+			<a>
 			<div>
-				<p>3</p>
+				<p>More info about the research behind the project here:</p>
+				<ul>
+					<li>
+						The swedish work enviroment authority: <a href= "https://www.av.se/halsa-och-sakerhet/buller/fragor-och-svar-om-buller2/#5"></a>
+					</li>
+					<li>
+						Student health report: <a href= "https://www.elevhalsoportalen.se/skola/halsoomraden/buller/"></a>
+					</li>
+				</ul>
 			</div>
+			</a>
+			
 		</div>
 	);
 }

@@ -1,7 +1,9 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
 .info{
     text-align: left;
     color: white;
-    background-color: black;
     opacity: 0.8;
     display:flex;
     flex-direction: row;
@@ -11,6 +13,11 @@
     color: white;
     text-decoration: none;
     padding: 10px;
+    background-color: #5a0101;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 1 0;
+
 }
 
 /* https://www.w3schools.com/howto/howto_css_about_page.asp */
