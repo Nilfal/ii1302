@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/informationpage.css';
 
 
-function Information() {
+function Info() 
+{
 	return (
 		<div className='info'>
 			<a href={"https://www.kth.se/student/kurser/kurs/II1302"}><div>
@@ -67,6 +68,28 @@ function Information() {
 			
 		</div>
 	);
+}
+
+function MoreInfo ()
+{
+	return (
+
+		<div>
+			hek´j
+		</div>
+	);
+}
+
+function Information () {
+	const [more, setMore] = useState(false)
+	return (
+		<div>
+			<button onClick={() => setMore((prev) => !prev)}>more info</button>
+			{
+				more ? <MoreInfo /> : <Info />
+			}
+		</div>
+	)
 }
 
 export default Information;
