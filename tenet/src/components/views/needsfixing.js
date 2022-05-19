@@ -1,60 +1,86 @@
 
+import '../css/component.css';
+import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook} from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+
 function Homepage() {
+
   return (
-    <section id="sec-1">
-      <div className="homepage" style={{
-        background: "content-box radial-gradient(greenYello, green)"
-      }}>
-        <style type="text/css"></style>
-        <div className='sub-main' >
-
+    <div className='component-body'>
+    <h1>Our components</h1>
+    <section id="component">
+      <div className="component-card">
+        <img src={Blossom} alt="" />
+        <div className="component-data">
+            <h2>Alva Ols</h2>
+            <i>Project Manager</i>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+            <a href="hthttps://www.facebook.com/alva.ols"><FaFacebook/></a>
+            <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+            <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
         </div>
-        <h2 style={
-          {
-            color: "black",
-            fontSize: "100px",
-            margin: 0,
-            padding: 0,
-            textAlign: "center",
-            marginTop: "20%",
-
-          }
-        }>Decibel</h2>
-
-        <h3 style={
-          {
-            color: "black",
-            fontSize: "50px",
-            fontFamily: "cursive",
-            margin: 0,
-            padding: 0,
-            textAlign: "center",
-            marginTop: "0.05%",
-          }
-        }>"When is loud, too loud"</h3>
-
-        <h4 style={
-          {
-
-            position: "absolute",
-            bottom: "10px",
-            left: "50%",
-            border: "2px solid #333",
-            color: "black",
-            cursor: "pointer",
-          }
-        }
-        >
-        </h4>
-        <section id ="#sec-2" >
-        
-        <a href="#sec-2">
-          <div class="scroll-down"></div>
-        </a>
-        </section>  
       </div>
+      <div className="component-card">
+        <img src={Bubbles} alt="" />
+        <div className="component-data">
+          <h2>Niloofar Rahmani</h2>
+          <i>Customer and Requirements Manager</i>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <a href="https://www.facebook.com/niloo.rahmani"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+      <div className="component-card">
+        <img src={Buttercup} alt="" />
+        <div className="component-data">
+          <h2>Nariman Haidar</h2>
+          <i>Architect</i>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <a href="https://www.facebook.com/narimann.haidar"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+    
     </section>
-   
+    
+      <div className="component-card">
+        <img src={Butch} alt="" />
+        <div className="component-data">
+          <h2>Ali Suleimani</h2>
+          <i>Sustainability Manager</i>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <a href="https://www.facebook.com/profile.php?id=100012727842001"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+      <div className="component-card">
+        <img src={Boomer} alt="" />
+        <div className="component-data">
+          <h2>Nils Falck</h2>
+          <i>Test Manager</i>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <a href="https://www.facebook.com/nfalck1"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+          </div>
+      </div>
+      <div className="component-card">
+        <img src={Brick} alt="" />
+        <div className="component-data">
+          <h2>Jabez Otieno</h2>
+          <i>Development Manager</i>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <a href="https://www.facebook.com/jabez.kunfu/"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+  </div>
+
   );
 }
 

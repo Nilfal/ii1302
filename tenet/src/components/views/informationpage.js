@@ -1,12 +1,13 @@
 import React from 'react';
-import '../css/informationpage.css';
+import '../css/component.css';
+
 
 
 function Information() {
 	return (
-		<div className='info'>
-			<p> Group 11: Working progress... </p>
-		</div>
+
+		<div><p>hello</p></div>
+
 	);
 }
 

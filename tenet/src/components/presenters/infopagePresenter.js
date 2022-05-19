@@ -1,12 +1,14 @@
 import Informationpage from '../views/informationpage';
-import Firstheader from '../views/firstHeader';
+import Header from '../views/header';
+import Footer from '../views/footer';
 import React from 'react';
 
 function infoPresenter(props){
     return (
         <div>
-            <Firstheader/>
+            <Header/>
             <Informationpage/>
+            <Footer />
         </div>
     
         );
