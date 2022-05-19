@@ -1,0 +1,15 @@
+.data {
+    text-align: center;
+    color:#b46e35;
+    background-color: rgb(243, 241, 241);
+    opacity: 0.8;
+  
+}
+.chart-wrapper, canvas {
+    margin: auto;
+    max-width: 1200px;
+  }
+  
+  .chart-wrapper {
+    margin-top: 50px;
+  }
