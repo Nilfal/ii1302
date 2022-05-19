@@ -1,19 +1,16 @@
-.info{
-    text-align: center;
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+.info {
+    text-align: left;
     color: white;
     background-color: rgb(243, 241, 241);
     opacity: 0.8;
-    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
-.test{
-    background-color: aliceblue;
-}
-
-.canvas{
-    background-color: antiquewhite;
-}
-/* https://www.w3schools.com/howto/howto_css_about_page.asp */
-
 .chart-wrapper, canvas {
     margin: auto;
     max-width: 1200px;
@@ -22,3 +19,226 @@
   .chart-wrapper {
     margin-top: 50px;
   }
+.info a:not(.link){
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(32deg, 
+    rgba(49, 49, 49, 0.04) 0%, 
+    rgba(49, 49, 49, 0.04) 75%,
+    rgba(225, 225, 225, 0.04) 75%, 
+    rgba(225, 225, 225, 0.04) 100%),
+    linear-gradient(131deg, 
+    rgba(241, 241, 241, 0.04) 0%,
+     rgba(241, 241, 241, 0.04) 73%,
+     rgba(224, 224, 224, 0.04) 73%, 
+     rgba(224, 224, 224, 0.04) 100%),
+     linear-gradient(274deg, 
+     rgba(106, 106, 106, 0.04) 0%, 
+     rgba(106, 106, 106, 0.04) 63%,
+     rgba(250, 250, 250, 0.04) 63%,
+      rgba(250, 250, 250, 0.04) 100%),
+      linear-gradient(121deg,
+       rgba(127, 127, 127, 0.04) 0%, 
+       rgba(127, 127, 127, 0.04) 43%,
+       rgba(228, 228, 228, 0.04) 43%, 
+       rgba(228, 228, 228, 0.04) 100%),
+       linear-gradient(90deg, 
+       rgb(96, 10, 0),
+       rgb(63, 13, 0));
+    padding: 10px;
+    background-color: #5a0101;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1 1 0;
+    position: relative;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    z-index: 1;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.info a.link{
+    color: white;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.info a:hover::after {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  .info a:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  .info a:hover a.link {
+    color: rgb(0, 0, 0);
+  }
+  .info a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -moz-transition: all 500ms;
+    -o-transition: all 500ms;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
+    background: white;
+  }
+  .info a::after {
+    top: -100%;
+  left: -100%;
+  height: 300%;
+  width: 300%;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.moreInfo {
+  text-align: left;
+    color: white;
+    opacity: 0.8;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.moreInfo div{
+  background-color: black;
+  margin: 10px;
+  padding: 10px;
+    color: white;
+    background-image: linear-gradient(45deg,
+          rgba(36, 36, 36, 0.05) 0%, 
+          rgba(36, 36, 36, 0.05) 4%,
+          rgba(22, 22, 22, 0.05) 4%,
+          rgba(22, 22, 22, 0.05) 100%),
+          linear-gradient(45deg, 
+          rgba(60, 60, 60, 0.1) 0%,
+          rgba(60, 60, 60, 0.1) 29%,
+          rgba(96, 96, 96, 0.1) 29%,
+          rgba(96, 96, 96, 0.1) 100%),
+          linear-gradient(90deg, 
+          rgba(222, 222, 222, 0.1) 0%,
+          rgba(222, 222, 222, 0.1) 35%,
+          rgba(109, 109, 109, 0.1) 35%,
+          rgba(109, 109, 109, 0.1) 100%),
+          linear-gradient(0deg, 
+          rgba(206, 206, 206, 0.09) 0%,
+          rgba(206, 206, 206, 0.09) 14%,
+          rgba(10, 10, 10, 0.09) 14%, 
+          rgba(10, 10, 10, 0.09) 100%),
+          linear-gradient(135deg, 
+          rgba(234, 234, 234, 0.06) 0%, 
+          rgba(234, 234, 234, 0.06) 15%
+          ,rgba(18, 18, 18, 0.06) 15%,
+          rgba(18, 18, 18, 0.06) 100%),
+          linear-gradient(90deg, 
+          rgba(237, 237, 237, 0.01) 0%,
+          rgba(237, 237, 237, 0.01) 55%,
+          rgba(206, 206, 206, 0.01) 55%,
+          rgba(206, 206, 206, 0.01) 100%),
+          linear-gradient(90deg, 
+          rgb(0,0,0),
+          rgb(0,0,0));
+    text-decoration: none;
+    border-radius: 10px;
+    flex: 1 1 0;
+    position: relative;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    z-index: 1;
+    font-weight: 700;
+    overflow: hidden;
+}
+
+.moreInfo div:hover::after {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+.moreInfo div:hover {
+  color: rgb(0, 0, 0);
+}
+
+.moreInfo div:hover a.link {
+  color: rgb(0, 0, 0);
+}
+.moreInfo div:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -moz-transition: all 500ms;
+  -o-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+  background: white;
+}
+.moreInfo div::after {
+  top: -100%;
+left: -100%;
+height: 300%;
+width: 300%;
+-moz-transform: scale(0);
+-ms-transform: scale(0);
+-webkit-transform: scale(0);
+transform: scale(0);
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+border-radius: 50%;
+}
+
+.moreInfo img{
+  width: 97%;
+  border: 5px solid black;
+}
+
+button.infoButton{
+  background-image: linear-gradient(45deg,
+   hsl(151,61%,51%),
+  hsl(196,61%,51%),
+  hsl(241,61%,51%),
+  hsl(286,61%,51%),
+  hsl(331,61%,51%),
+  hsl(16,61%,51%),
+  hsl(61,61%,51%),
+  hsl(106,61%,51%));
+  border: 5px solid transparent;
+  border-image: linear-gradient(to bottom right, 
+  hsl(151,61%,51%),
+  hsl(196,61%,51%),
+  hsl(241,61%,51%),
+  hsl(286,61%,51%),
+  hsl(331,61%,51%),
+  hsl(16,61%,51%),
+  hsl(61,61%,51%),
+  hsl(106,61%,51%));
+  border-image-slice: 1;
+  margin-left: 10px;
+  padding: 10px;
+  font-weight: bold ;
+  font-size: large;
+}
+

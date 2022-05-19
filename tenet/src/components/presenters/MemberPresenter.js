@@ -1,14 +1,14 @@
-import Component from '../views/component';
+import Member from '../views/members';
 import Header from '../views/header';
 import Footer from '../views/footer';
 import React from 'react';
 
-function ComponentPresenter(props) {
+function MemberPresenter(props) {
 	return (
 		<div>
-			<Component />
+			<Member />
 		</div>
 	);
 }
 
-export default ComponentPresenter;
+export default MemberPresenter;

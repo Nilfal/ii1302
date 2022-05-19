@@ -24,7 +24,7 @@ function about() {
             <h2>Alva Ols</h2>
             <i>Project Manager</i>
             <p>Manages and supervises the team to help achieve project goals 
-				and ensures the project's sucess. Oversees all aspects of the project, sets deadlines, assign responsibilities, 
+				and ensures the project's success. Oversees all aspects of the project, sets deadlines, assign responsibilities, 
 				monitors and summarize progress of project</p>
             <a href="https://www.facebook.com/alva.ols"><FaFacebook/></a>
             <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
