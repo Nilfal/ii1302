@@ -5,9 +5,9 @@ import '../css/component.css';
 
 function Information() {
 	return (
-
-		<div><p>hello</p></div>
-
+		<div className='info'>
+			<p> haha </p>
+		</div>
 	);
 }
 
