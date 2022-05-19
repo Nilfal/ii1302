@@ -6,9 +6,7 @@ import React from 'react';
 function HomepagePresenter(props) {
 	return (
 		<div>
-			<Header />
 			<Homepage />
-			<Footer />
 		</div>
 	);
 }

@@ -6,11 +6,19 @@ const ConfettiButton = (props) => {
 
 	const handleClick = (e) => {
 		//animation reset
-		setAnimate(false);
-		setAnimate(true);
-		setTimeout(function () {
+		const timeout = setTimeout(function() {
 			setAnimate(false);
 		}, 500);
+		if (animate) {
+			setAnimate(false);
+			setAnimate(true);
+			clearTimeout(timeout);
+			setTimeout(function() {
+				setAnimate(false);
+			}, 500);
+		} else {
+			setAnimate(true);
+		}
 		if (props.onClick) props.onClick();
 	};
 

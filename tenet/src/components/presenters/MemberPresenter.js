@@ -6,9 +6,7 @@ import React from 'react';
 function MemberPresenter(props) {
 	return (
 		<div>
-			<Header />
 			<Member />
-			<Footer />
 		</div>
 	);
 }
