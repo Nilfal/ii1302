@@ -1,23 +1,14 @@
-
-.middle{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	text-align: center;
-	transform: translate(-50%,-50%);
-}
-
 .confetti-button:focus { outline: 0; }
 
 .confetti-button:before, .confetti-button:after {
 	position: absolute;
 	content: '';
 	display: block;
-	width: 140%;
+	width: 100%;
 	height: 100%;
 	left: -20%;
 	z-index: -1000;
-	transition: all ease-in-out 0.5s;
+	transition: all ease-in-out 0.1s;
 	background-repeat: no-repeat;
 }
 .confetti-button:before {
@@ -56,7 +47,7 @@
 
 .confetti-button.animate:before {
 	display: block;
-	animation: topBubbles ease-in-out 0.70s forwards;
+	animation: topBubbles ease-in-out 0.2s forwards;
 }
 
 .confetti-button.animate:after {

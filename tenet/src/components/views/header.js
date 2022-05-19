@@ -1,10 +1,10 @@
 import React from 'react';
 import { FaHome } from 'react-icons/fa';
 import { FaInfo } from 'react-icons/fa';
-import { FaPhone } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import { ImStatsDots } from 'react-icons/im';
 import { Link } from 'react-router-dom';
+import { FaTools } from 'react-icons/fa';
 
 import '../css/header.css';
 import ConfettiButton from '../ConfettiButton';
@@ -31,9 +31,9 @@ function Header() {
 							<ImStatsDots size="30px" color="#b46e35" />
 						</Link>
 					</ConfettiButton>
-					<ConfettiButton className="contact">
-						<Link to="/Contact">
-							<FaPhone size="30px" color="#b46e35" />
+					<ConfettiButton className="component">
+						<Link to="/Component">
+							<FaTools size="30px" color="#b46e35" />
 						</Link>
 					</ConfettiButton>
 					<ConfettiButton className="abouts">

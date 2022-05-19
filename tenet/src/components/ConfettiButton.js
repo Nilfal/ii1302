@@ -10,7 +10,7 @@ const ConfettiButton = (props) => {
 		setAnimate(true);
 		setTimeout(function () {
 			setAnimate(false);
-		}, 700);
+		}, 500);
 		if (props.onClick) props.onClick();
 	};
 
