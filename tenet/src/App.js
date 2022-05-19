@@ -5,14 +5,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomepagePresenter from './components/presenters/homepagePresenter';
 import InfoPresenter from './components/presenters/InfoPresenter';
 import DataPresenter from './components/presenters/dataPresenter';
+import AboutPresenter from './components/presenters/aboutPresenter';
 import ComponentPresenter from './components/presenters/ComponentPresenter';
-import MemberPresenter from './components/presenters/MemberPresenter';
 
 function App(props) {
 	return (
 		<BrowserRouter>
 			<div className="flexParent">
 				<Routes>
+    
 					<Route
 						path="/home"
 						element={<HomepagePresenter model={props.model} />}
@@ -23,12 +24,13 @@ function App(props) {
 					<Route
 						path="/Component"
 						element={<ComponentPresenter model={props.model} />}
-					/>
-					<Route
-						path="/member"
-						element={<MemberPresenter model={props.model} />}
-					/>
+            <Route path="/data" element={<DataPresenter model={props.model} />} />
+				
+
+				<Route path="/about" element={<AboutPresenter model={props.model} />} />
+					
 				</Routes>
+				
 			</div>
 		</BrowserRouter>
 	);
