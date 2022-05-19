@@ -1,18 +1,16 @@
-import Data from '../views/data';
+import Member from '../views/members';
 import Header from '../views/header';
 import Footer from '../views/footer';
 import React from 'react';
 
-
-function DataPresenter(props) {
+function MemberPresenter(props) {
 	return (
 		<div>
 			<Header />
-			<Data />
-			
+			<Member />
 			<Footer />
 		</div>
 	);
 }
 
-export default DataPresenter;
+export default MemberPresenter;
