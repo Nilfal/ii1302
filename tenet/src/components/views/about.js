@@ -1,129 +1,104 @@
 import React from 'react';
-import '../css/about.css';
-import "../css/informationpage.css";
-import Dj from '../images/dj.jpg';
-import Alv from '../images/Alva.jpg';
-import Al from '../images/Ali.jpg';
-import Ja from '../images/jabez.jpg';
-import Nariman from '../images/nariman.png';
-import niloofar from '../images/Niloofar.jpg';
-import Nils from '../images/nils.png'; 
+import '../css/component.css';
+import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook} from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 
 import Info from '../images/information icon.jpg';
-import AlvaC from '../images/AlvaCopy.jpg';
-import AliC from '../images/AliCopy.jpg';
-import NarimanC from '../images/NarimnCopy.jpg';
-import NiloofarC from '../images/NiloofarCopy.jpg';
-import NilsC from '../images/nilsCopy.png';
-import JabezC from '../images/jabezCopy.jpg';
+import AlvaC from '../images/Alva.jpg';
+import AliC from '../images/Ali.jpg';
+import NarimanC from '../images/nariman.png';
+import NiloofarC from '../images/Niloofar.jpg';
+import NilsC from '../images/nils.png';
+import JabezC from '../images/jabez.jpg';
 
 function about() {
 	return (
 
-		<section className="make">
+	<div className='component-body'>
+    <h1>Meet Our Team</h1>
+    <section id="component">
+      <div className="component-card">
+        <img src={AlvaC} className="component-img"alt="" />
+        <div className="component-data">
+            <h2>Alva Ols</h2>
+            <i>Project Manager</i>
+            <p>Manages and supervises the team to help achieve project goals 
+				and ensures the project's sucess. Oversees all aspects of the project, sets deadlines, assign responsibilities, 
+				monitors and summarize progress of project</p>
+            <a href="https://www.facebook.com/alva.ols"><FaFacebook/></a>
+            <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+            <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+      <div className="component-card">
+        <img src={NiloofarC} className="component-img" alt="" />
+        <div className="component-data">
+          <h2>Niloofar Rahmani</h2>
+          <i>Customer and Requirements Manager</i>
+          <p>The customer and requirements man will constantly identify opporturnities to grow the 
+			customer base including  deriving requirements and providing them to the rest of the team
 
-			    <div class="row">
-					<div class="column">
-						<div class="card">
-						    <img src={AlvaC} alt=
-							     "" height="100%" width="100%"/>
-							<div class="container">
-								<h2>Alva Ols</h2>
-								<p class="title">Project manager</p>
-								<p>Alva ols is responsible for the project management and documentation</p>
-								<p>alvaols@kth.se</p>
-								<p><button class="button">Contact</button></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="column">
-						<div class="card">
-							<img src={AliC} alt=
-							      "" height="100%" width="100%"/>
-							<div class="container">
-								<h2>Ali Suleimani</h2>
-								<p class="title">Sustainability manager</p>
-								<p> Ali Suleimani is responsible for sustainability and environment of the working area</p>
-								<p>alisu@kth.se</p>
-								<p><button class="button">Contact</button></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="column">
-						<div class="card">
-							<img src={NilsC} alt=
-							      "" height="90%" width="100%"/>
-							<div class="container">
-								<h2>Nils Falck</h2>
-								<p class="title">Test manager</p>
-								<p> Nils Falck is responsible for the project sustainability and environmentally</p>
-								<p>nils@kth.se</p>
-								<p><button class="button">Contact</button></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="column">
-						<div class="card">
-						    <img src={NiloofarC} alt= 
-							    "" height="100%" width="100%"/>
-							<div class="container">
-								<h2>Niloofar Rahmani</h2>
-								<p class="title">customer manager</p>
-								<p>Niloofar is responsible for customer and requirment product</p>
-								<p>nilo@kth.se</p>
-								<p><button class="button">Contact</button></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="column">
-						<div class="card">
-							<img src={NarimanC} alt=
-							     "" height="110%" width="100%"/>
-							<div class="container">
-								<h2>Nariman Haidar</h2>
-								<p class="title">Architecture manager</p>
-								<p> Narima Haidar is responsible for architecture and development</p>
-								<p>jabez@kth.se</p>
-								<p><button class="button">Contact</button></p>
-							</div>
-						</div>
-					</div>
-
-					<div class="column">
-						<div class="card">
-							<img src={JabezC} alt=
-							    "" height="100%" width="100%"/>
-							<div class="container">
-								<h2>Jabez Kungu</h2>
-								<p class="title">Develop manager</p>
-								<p> jabez kungu is responsible for development of the project and also helping other</p>
-								<p>jabez@kth.se</p>
-								<p><button class="button">Contact</button></p>
-							</div>
-						</div>
-					</div>
-				</div>
-					<div className="text">
-					<div class="show-hide-text wrapper">
-						<a  id="show-more" class=
-						    "show-less" href="#show-less">Show less</a>
-						<a  id="show-less" class=
-						    "show-more" href="#show-more">Show more</a>
-						<h2>Further information<img src={Info} alt= 
-						"" height="50px%" width="50px%"/></h2>
-						<p>This project group consist of sex member and every member has different skills. Alva Ols and Nils Falck study a bacheloor degree in Economic and Camputer Engineering at KTH.
-							Jabez Kungu, Nillofar Rahmani and Nariman haidar study a bachelor degree in Computer engineering at Kth. 
-							Ali Suleimani also study a bechelor degree in Elektronik and Camputer Engineering at KTH.
-							This project was done in the course project and Project method. 
-					    </p>
-					</div>
-				</div>
-
-		</section>
+		  </p>
+          <a href="https://www.facebook.com/niloo.rahmani"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+      <div className="component-card">
+        <img src={NarimanC} alt="" />
+        <div className="component-data">
+          <h2>Nariman Haidar</h2>
+          <i>Architect</i>
+          <p>The architect is responsible for defining and maintaining the structure of the solution, and ensuring that it will meet the requirements. 
+			An agile architect must also help the team to work together in an agile fashion, to jointly own the solution, 
+			and to interface well with other parts of the organisation</p>
+          <a href="https://www.facebook.com/narimann.haidar"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+    
+    </section>
+    
+      <div className="component-card">
+        <img src={AliC} alt="" />
+        <div className="component-data">
+          <h2>Ali Suleimani</h2>
+          <i>Sustainability Manager</i>
+          <p>The sustainability manager oversees the implementation of sustainability strategies during a construction project. This usually relates to the 
+			environmental impacts of the work being carried out, to ensure that the project adheres to the most economically 
+			and environmentally friendly methods possible.</p>
+          <a href="https://www.facebook.com/profile.php?id=100012727842001"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+      </div>
+      <div className="component-card">
+        <img src={NilsC} alt="" />
+        <div className="component-data">
+          <h2>Nils Falck</h2>
+          <i>Test Manager</i>
+          <p>Test manager provides functional and application expertise for the group 
+			as it relates to software test and quality assurance tools.</p>
+          <a href="https://www.facebook.com/nfalck1"><FaFacebook/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+          <a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+          </div>
+      </div>
+      <div className="component-card">
+        <img src={JabezC} alt="" />
+        <div className="component-data">
+          <h2>Jabez Otieno</h2>
+          <i>Development Manager</i>
+          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit 
+			Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <a href="https://www.facebook.com/jabez.kunfu/"><FaFacebook/></a>
+        	<a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
+			<a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>
+        </div>
+    </div>
+</div>
     );
 }
 

@@ -32,12 +32,12 @@ function Header() {
 						</Link>
 					</ConfettiButton>
 					<ConfettiButton className="component">
-						<Link to="/Component">
+						<Link to="/component">
 							<FaTools size="30px" color="#b46e35" />
 						</Link>
 					</ConfettiButton>
 					<ConfettiButton className="abouts">
-						<Link to="/member">
+						<Link to="/about">
 							<MdGroups size="30px" color="#b46e35" />
 						</Link>
 					</ConfettiButton>

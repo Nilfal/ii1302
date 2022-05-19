@@ -4,7 +4,7 @@
     color:#333;
     background:#0e1013;
     font-family: 'Nunito', sans-serif;
-    opacity: 0.9;
+    opacity: 0.99;
     border-radius: 10px;
 }
 h1{
@@ -12,6 +12,11 @@ h1{
     font-family: 'Nunito', sans-serif;
     font-size:3em;
     color:#bbb
+}
+.component-img{
+
+    height: auto;
+    width: auto;
 }
 
 #component{
@@ -23,7 +28,7 @@ h1{
 .component-card {
     width:33%;
     min-width: 250px;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
     position: relative;
     margin:0 0.5% 1% 0;
@@ -93,4 +98,52 @@ h1{
     .component-card {width:100%;margin-right:0}
 }
 
-
+.about-text{
+    position: absolute;
+    text-align: left;
+    color: black;
+    left: 10px;
+    top: 700px;
+  }
+  
+  .show-hide-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .show-hide-text a {
+    order: 2;
+  }
+  
+  .show-hide-text p {
+    position: relative;
+    overflow: hidden;
+    max-height: 60px; /* The Height of 3 rows*/
+  }
+  
+  .show-hide-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 3 Rows of text*/
+    -webkit-box-orient: vertical;
+  }
+  .show-less {
+    display: none;
+  }
+  
+  .show-less:target {
+    display: block;
+  }
+  
+  .show-less:target ~ p {
+    display: block;
+    max-height: 100%;
+  }
+  
+  .show-less:target + a {
+    display: none;
+  }
+  
+  
+  
+  
+  

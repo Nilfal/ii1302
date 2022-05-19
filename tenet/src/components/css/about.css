@@ -50,7 +50,7 @@ html {
   color: grey;
 }
 
-.button { /* den delen bara stylar contacten och har ingen ting med poppande göra*/
+#about-button { /* den delen bara stylar contacten och har ingen ting med poppande göra*/
   border: none; 
   outline: 0; 
   display: inline-block; 
@@ -62,7 +62,7 @@ html {
   width: 100%;
 }
 
-.button:hover {
+#about-button:hover {
   background-color: #555;
 }
 
@@ -74,7 +74,7 @@ html {
 }
 
 .text{
-  position: absolute;
+
   text-align: left;
   color: black;
   left: 10px;

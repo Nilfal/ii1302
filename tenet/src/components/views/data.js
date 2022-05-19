@@ -16,40 +16,35 @@ function Data() {
 
 //ddataset == y
 //LABLE == X
-  const [ddataset, setDataset] = React.useState([]);
-  const [lableset, setLableset] = React.useState([]);
-  
+const [ddataset, setDataset] = React.useState([]);
+const [lableset, setLableset] = React.useState([]);
 
 
 
 
 
 
-  React.useEffect(() => { 
-	  const intervall = setInterval( ()=> {
-		  
+React.useEffect(() => { 
+	const intervall = setInterval( ()=> { 
 		const soundValueRef = ref(database, "path/to/node");
 		onValue(soundValueRef, (snapshot) => {
-		  const datas = snapshot.val();
+			const datas = snapshot.val();
 		 // console.log(data);
-		  setDataset(datas);
+			setDataset(datas);
 		
-		  const len = ddataset.length;
-		  setLableset(Array.from(Array(len).keys()));
-
-		  
+			const len = ddataset.length;
+			setLableset(Array.from(Array(len).keys()));
 		
-		});
-	  },5000);
-	  return()=> clearInterval(intervall);
-  
-  }, [ddataset,lableset]);
+});},5000);
+return()=> clearInterval(intervall);
+
+}, [ddataset,lableset]);
 
 
-  const state = {
+const state = {
 	labels: lableset,
 	datasets: [
-	  {
+	{
 		label: 'Sound level',
 		fill: false,
 		lineTension: 0.1,
@@ -57,16 +52,14 @@ function Data() {
 		borderColor: 'rgb(75, 192, 192)',
 		borderWidth: 4,
 		data: ddataset
-	  }
+	}
 	]
-  }
+}
 	
 //console.log(chart());
-  return (
+return (
     <div className="info">
-      <p> Group 11: working progress.. </p>
-
-	
+    <p> Group 11: working progress.. </p>
 	<div id="chart-wrapper">
 
 	<Line 
@@ -79,7 +72,7 @@ function Data() {
 		</div>
 		
     </div>
-  );
+);
 }
 
 
