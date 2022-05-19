@@ -6,9 +6,7 @@ import React from 'react';
 function InfoPresenter(props) {
 	return (
 		<div>
-			<Header />
 			<Info />
-			<Footer />
 		</div>
 	);
 }

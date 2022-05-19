@@ -7,11 +7,14 @@ import InfoPresenter from './components/presenters/InfoPresenter';
 import DataPresenter from './components/presenters/dataPresenter';
 import ComponentPresenter from './components/presenters/ComponentPresenter';
 import MemberPresenter from './components/presenters/MemberPresenter';
+import Header from './components/views/header';
+import Footer from './components/views/footer';
 
 function App(props) {
 	return (
 		<BrowserRouter>
 			<div className="flexParent">
+				<Header />
 				<Routes>
 					<Route
 						path="/home"
@@ -29,6 +32,7 @@ function App(props) {
 						element={<MemberPresenter model={props.model} />}
 					/>
 				</Routes>
+				<Footer />
 			</div>
 		</BrowserRouter>
 	);

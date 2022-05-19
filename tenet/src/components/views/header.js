@@ -13,11 +13,11 @@ function Header() {
 	return (
 		<div className="headers">
 			<div className="blah">
-				<ConfettiButton className="homes">
-					<Link to="/Home">
+				<Link to="/Home">
+					<ConfettiButton className="homes">
 						<FaHome size="40px" color="#b46e35" />
-					</Link>
-				</ConfettiButton>
+					</ConfettiButton>
+				</Link>
 
 				<div
 					style={{
@@ -26,26 +26,26 @@ function Header() {
 				></div>
 
 				<div className="bleh">
-					<ConfettiButton className="data">
-						<Link to="/data">
+					<Link to="/data">
+						<ConfettiButton className="data">
 							<ImStatsDots size="30px" color="#b46e35" />
-						</Link>
-					</ConfettiButton>
-					<ConfettiButton className="component">
-						<Link to="/Component">
+						</ConfettiButton>
+					</Link>
+					<Link to="/Component">
+						<ConfettiButton className="component">
 							<FaTools size="30px" color="#b46e35" />
-						</Link>
-					</ConfettiButton>
-					<ConfettiButton className="abouts">
-						<Link to="/member">
+						</ConfettiButton>
+					</Link>
+					<Link to="/member">
+						<ConfettiButton className="abouts">
 							<MdGroups size="30px" color="#b46e35" />
-						</Link>
-					</ConfettiButton>
-					<ConfettiButton className="infos">
-						<Link to="/info">
+						</ConfettiButton>
+					</Link>
+					<Link to="/info">
+						<ConfettiButton className="infos">
 							<FaInfo size="30px" color="#b46e35" />
-						</Link>
-					</ConfettiButton>
+						</ConfettiButton>
+					</Link>
 				</div>
 			</div>
 		</div>
