@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomepagePresenter from './components/presenters/homepagePresenter';
 import InformationPresenter from './components/presenters/infopagePresenter';
 import DataPresenter from './components/presenters/dataPresenter';
+import AboutPresenter from './components/presenters/aboutPresenter';
 
 function App(props) {
 
@@ -23,7 +24,11 @@ function App(props) {
 					/>
 
 					<Route path="/data" element={<DataPresenter model={props.model} />} />
+				
+
+				<Route path="/about" element={<AboutPresenter model={props.model} />} />
 				</Routes>
+				
 			</div>
 		</BrowserRouter>
 	);
