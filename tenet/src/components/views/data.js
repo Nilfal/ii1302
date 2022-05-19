@@ -1,3 +1,4 @@
+
 import React from "react";
 import FirebaseApp from "../config/firebase";
 import "../css/informationpage.css";
@@ -5,9 +6,11 @@ import { getDatabase, ref, onValue, DataSnapshot } from "firebase/database";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
+
 const database = getDatabase(FirebaseApp);
 
 function Data() {
+
   //ddataset == y
   //LABLE == X
   const [ddataset, setDataset] = React.useState([]);
@@ -77,6 +80,7 @@ function Data() {
       </div>
     </div>
   );
+
 }
 
 export default Data;

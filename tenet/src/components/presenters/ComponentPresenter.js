@@ -1,15 +1,14 @@
-import Data from '../views/data';
+import Component from '../views/component';
 import Header from '../views/header';
 import Footer from '../views/footer';
 import React from 'react';
 
-function DataPresenter(props) {
+function ComponentPresenter(props) {
 	return (
 		<div>
-			<Data />
-			<Data />
+			<Component />
 		</div>
 	);
 }
 
-export default DataPresenter;
+export default ComponentPresenter;
