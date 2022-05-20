@@ -15,7 +15,7 @@ function Header() {
 			<div className="blah">
 				<Link to="/Home">
 					<ConfettiButton className="homes">
-						<FaHome size="40px" color="#b46e35" />
+						<FaHome size="30px" color="#b46e35" />
 					</ConfettiButton>
 				</Link>
 
@@ -28,22 +28,22 @@ function Header() {
 				<div className="bleh">
 					<Link to="/data">
 						<ConfettiButton className="data">
-							<ImStatsDots size="30px" color="#b46e35" />
+							<ImStatsDots size="28px" color="#b46e35" />
 						</ConfettiButton>
 					</Link>
 					<Link to="/Component">
 						<ConfettiButton className="component">
-							<FaTools size="30px" color="#b46e35" />
+							<FaTools size="28px" color="#b46e35" />
 						</ConfettiButton>
 					</Link>
 					<Link to="/about">
 						<ConfettiButton className="abouts">
-							<MdGroups size="30px" color="#b46e35" />
+							<MdGroups size="28px" color="#b46e35" />
 						</ConfettiButton>
 					</Link>
 					<Link to="/info">
 						<ConfettiButton className="infos">
-							<FaInfo size="30px" color="#b46e35" />
+							<FaInfo size="28px" color="#b46e35" />
 						</ConfettiButton>
 					</Link>
 				</div>

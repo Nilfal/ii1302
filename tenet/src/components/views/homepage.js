@@ -23,7 +23,7 @@ export default class middleSection extends Component {
         </div>
         
         <div id="about" className='about'>
-    		<img src={DBimage} alt='Different noise levels' className='img'/> 
+    		
 			<div className='text'>
 				<p>
 				We have all been there, a loud and busy classroom with chatters everywhere, laughter 

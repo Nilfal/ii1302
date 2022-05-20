@@ -1,7 +1,7 @@
 
 import React from "react";
 import FirebaseApp from "../config/firebase";
-import "../css/informationpage.css";
+import "../css/data.css";
 import { getDatabase, ref, onValue, DataSnapshot } from "firebase/database";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
@@ -62,10 +62,10 @@ function Data() {
 
   //console.log(chart());
   return (
-    <div className="info">
+    <div className="data-information">
       <h4>Decibel Sound Chart</h4>
 
-      <div> Curret sound : {ddataset[ddataset.length - 1]}</div>
+      <div> Current sound : {ddataset[ddataset.length - 1]}</div>
 
       <div id="chart-wrapper">
         <Line

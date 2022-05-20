@@ -16,7 +16,7 @@ function about() {
 	return (
 
 	<div className='component-body'>
-    <h1>Meet Our Team</h1>
+    <h1 className = 'component-h1'>Meet Our Team</h1>
     <section id="component">
       <div className="component-card">
         <img src={AlvaC} className="component-img"alt="" />
@@ -91,8 +91,8 @@ function about() {
         <div className="component-data">
           <h2>Jabez Otieno</h2>
           <i>Development Manager</i>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit 
-			Etiam sedesmi. Consectetur elit placerat mollis donec dolor.</p>
+          <p> Development manager will have a deep understanding of programming languages and the software development life-cycle, 
+            as well as excellent analytical abilities and problem-solving skills.</p>
           <a href="https://www.facebook.com/jabez.kunfu/"><FaFacebook/></a>
         	<a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaInstagram/></a>
 			<a href="https://gits-15.sys.kth.se/jkotieno/II1302-Group11"><FaLinkedin/></a>

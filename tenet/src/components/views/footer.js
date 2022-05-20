@@ -27,7 +27,11 @@ function Footer() {
                 <div className='child'>
                     <h6>Quick links</h6>
                     <ul className='footer-links'>
-                        <li><Link to = "/home" spy={true} smooth={true}><span>Home</span></Link></li>
+                        <li><Link to = "/home"><span>Home</span></Link></li>
+                        <li><Link to = "/data"><span>Data</span></Link></li>
+                        <li><Link to = "/component"><span>Components</span></Link></li>
+                        <li><Link to = "/about"><span>About Us</span></Link></li>
+                        <li><Link to = "/info"><span>Information</span></Link></li>
                     </ul>
                 </div>
             </div>

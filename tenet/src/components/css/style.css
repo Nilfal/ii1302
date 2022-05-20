@@ -30,7 +30,7 @@
     }
 }
 
-@media all and (min-width: 1080px) {
+@media all and (min-width: 1600px) {
     .nav, .h1, .demo, .img, .text {
     -webkit-flex: none;
     flex: none;
