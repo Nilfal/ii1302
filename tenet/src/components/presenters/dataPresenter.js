@@ -4,6 +4,7 @@ import React from 'react';
 function DataPresenter(props) {
 	return (
 		<div>
+			
 			<Data />
 		</div>
 	);
