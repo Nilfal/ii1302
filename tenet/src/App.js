@@ -16,23 +16,13 @@ function App(props) {
 			<div className="flexParent">
 				<Header />
 				<Routes>
-					<Route
-						path="/home"
-						element={<HomepagePresenter model={props.model} />}
-					/>
+					<Route path="/home" element={<HomepagePresenter model={props.model} />}/>
 					<Route path="/" element={<HomepagePresenter model={props.model} />} />
 					<Route path="/info" element={<InfoPresenter model={props.model} />} />
 					<Route path="/data" element={<DataPresenter model={props.model} />} />
-					<Route
-						path="/Component"
-						element={<ComponentPresenter model={props.model} />}
-					></Route>
+					<Route path="/Component" element={<ComponentPresenter model={props.model} />} />
 					<Route path="/data" element={<DataPresenter model={props.model} />} />
-
-					<Route
-						path="/about"
-						element={<AboutPresenter model={props.model} />}
-					/>
+					<Route path="/about" element={<AboutPresenter model={props.model} />}/>
 				</Routes>
 				<Footer />
 			</div>

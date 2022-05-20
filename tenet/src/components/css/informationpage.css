@@ -1,8 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 body{
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Nunito', sans-serif;
 }
-.info {
+.information{
     text-align: left;
     color: white;
     background-color: rgb(243, 241, 241);
@@ -11,15 +11,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
 }
-.chart-wrapper, canvas {
-    margin: auto;
-    max-width: 1200px;
-  }
-  
-  .chart-wrapper {
-    margin-top: 50px;
-  }
-.info a:not(.link){
+.information a:not(.link){
     color: white;
     text-decoration: none;
     background-image: linear-gradient(32deg, 
@@ -29,22 +21,22 @@ body{
     rgba(225, 225, 225, 0.04) 100%),
     linear-gradient(131deg, 
     rgba(241, 241, 241, 0.04) 0%,
-     rgba(241, 241, 241, 0.04) 73%,
-     rgba(224, 224, 224, 0.04) 73%, 
-     rgba(224, 224, 224, 0.04) 100%),
-     linear-gradient(274deg, 
-     rgba(106, 106, 106, 0.04) 0%, 
-     rgba(106, 106, 106, 0.04) 63%,
-     rgba(250, 250, 250, 0.04) 63%,
+    rgba(241, 241, 241, 0.04) 73%,
+    rgba(224, 224, 224, 0.04) 73%, 
+    rgba(224, 224, 224, 0.04) 100%),
+    linear-gradient(274deg, 
+    rgba(106, 106, 106, 0.04) 0%, 
+    rgba(106, 106, 106, 0.04) 63%,
+    rgba(250, 250, 250, 0.04) 63%,
       rgba(250, 250, 250, 0.04) 100%),
       linear-gradient(121deg,
-       rgba(127, 127, 127, 0.04) 0%, 
-       rgba(127, 127, 127, 0.04) 43%,
-       rgba(228, 228, 228, 0.04) 43%, 
-       rgba(228, 228, 228, 0.04) 100%),
-       linear-gradient(90deg, 
-       rgb(96, 10, 0),
-       rgb(63, 13, 0));
+      rgba(127, 127, 127, 0.04) 0%, 
+      rgba(127, 127, 127, 0.04) 43%,
+      rgba(228, 228, 228, 0.04) 43%, 
+      rgba(228, 228, 228, 0.04) 100%),
+      linear-gradient(90deg, 
+      rgb(96, 10, 0),
+      rgb(63, 13, 0));
     padding: 10px;
     background-color: #5a0101;
     margin: 10px;
@@ -60,7 +52,7 @@ body{
     overflow: hidden;
 }
 
-.info a.link{
+.information a.link{
     color: white;
     -moz-transition: all 300ms;
     -o-transition: all 300ms;
@@ -68,20 +60,20 @@ body{
     transition: all 300ms;
 }
 
-.info a:hover::after {
+.information a:hover::after {
     -moz-transform: scale(1, 1);
     -ms-transform: scale(1, 1);
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
   }
-  .info a:hover {
+  .information a:hover {
     color: rgb(0, 0, 0);
   }
 
-  .info a:hover a.link {
+  .information a:hover a.link {
     color: rgb(0, 0, 0);
   }
-  .info a:after {
+  .information a:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -95,7 +87,7 @@ body{
     transition: all 500ms;
     background: white;
   }
-  .info a::after {
+  .information a::after {
     top: -100%;
   left: -100%;
   height: 300%;
@@ -217,7 +209,7 @@ border-radius: 50%;
 
 button.infoButton{
   background-image: linear-gradient(45deg,
-   hsl(151,61%,51%),
+  hsl(151,61%,51%),
   hsl(196,61%,51%),
   hsl(241,61%,51%),
   hsl(286,61%,51%),

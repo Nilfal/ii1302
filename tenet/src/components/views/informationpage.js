@@ -5,7 +5,7 @@ import '../css/informationpage.css';
 function Info() 
 {
 	return (
-		<div className='info'>
+		<div className='information'>
 			<a href={"https://www.kth.se/student/kurser/kurs/II1302"}><div>
 				<p>II1302 Projekt och projektmetoder, kursens krav: </p>
 			<ul>
@@ -57,10 +57,10 @@ function Info()
 				<p>More info about the research behind the project here:</p>
 				<ul>
 					<li>
-						 <a class="link" href= "https://www.av.se/halsa-och-sakerhet/buller/fragor-och-svar-om-buller2/#5">The swedish work enviroment authority:</a>
+						<a className="link" href= "https://www.av.se/halsa-och-sakerhet/buller/fragor-och-svar-om-buller2/#5">The swedish work enviroment authority:</a>
 					</li>
 					<li>
-						 <a class="link" href= "https://www.elevhalsoportalen.se/skola/halsoomraden/buller/">Student health report:</a>
+						<a className="link" href= "https://www.elevhalsoportalen.se/skola/halsoomraden/buller/">Student health report:</a>
 					</li>
 				</ul>
 			</div>
@@ -109,24 +109,24 @@ function MoreInfo ()
 				<p>Items noise level:</p>
 				<ul>
 				<li>
-				 Refrigerator: 50 dB
+				Refrigerator: 50 dB
 					</li>
 					<li>
-				 Rocket launching: 190 dB
+				Rocket launching: 190 dB
 					</li>
 					<li>
-				 Car horn: 110 dB
+				Car horn: 110 dB
 					</li>
 					<li>
-				 Normal conversation: 60 dB
+				Normal conversation: 60 dB
 					</li>
 					<li>
-				 Thunder: 120 dB
+				Thunder: 120 dB
 					</li>
 					<li>
-				 Breathing: 10dB
+				Breathing: 10dB
 					</li>
-				 
+				
 				</ul>
 			<img src="https://www.remaudiology.com/wp-content/uploads/2017/09/Fotolia_172344393_Subscription_Monthly_M-1030x1030.jpg?fbclid=IwAR26MSApD2Y4BVNRPE1v2KZroUX8dKwh3d7ZINKOQxOtSQ2SGJYeG0AOkS4"></img>
 			</div>
@@ -157,7 +157,7 @@ function Information () {
 	const [more, setMore] = useState(false)
 	return (
 		<div>
-			<button class="infoButton" onClick={() => setMore((prev) => !prev)}>More Info</button>
+			<button className="infoButton" onClick={() => setMore((prev) => !prev)}>More Info</button>
 			{
 				more ? <MoreInfo /> : <Info />
 			}

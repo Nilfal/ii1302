@@ -31,8 +31,8 @@ button {
 	display: flex;
 	font-size: 1em;
 	padding: 1em 2em;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	-webkit-appearance: none;
 	appearance: none;
 	background-color:transparent;
@@ -40,12 +40,12 @@ button {
 	border: none;
 	cursor: pointer;
 	position: center;
-	transition: transform ease-in 0.1s, box-shadow ease-in 0.1s;
-	box-shadow: 0 2px 20px rgba(230, 232, 223, 0.5);
+	transition: transform ease-in 0.4s, box-shadow ease-in 0.4s; 
+	/*box-shadow: 0 2px 20px rgba(230, 232, 223, 0.5);*/
 }
 
 button:hover {
-	transform: scale(2);
+	transform: scale(1.8);
 }
 
 .contact {

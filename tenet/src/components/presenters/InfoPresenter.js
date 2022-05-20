@@ -1,6 +1,4 @@
-import Info from '../views/info';
-import Header from '../views/header';
-import Footer from '../views/footer';
+import Info from '../views/informationpage';
 import React from 'react';
 
 function InfoPresenter(props) {

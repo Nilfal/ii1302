@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+.component-body{
+    margin: 50px 0 50px 0;
+    color:#333;
+    background:#0e1013;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 10px;
+}
+.component-h1{
+    text-align:center;
+    font-family: 'Nunito', sans-serif;
+    font-size:3em;
+    color:#bbb
+}
+.component-img{
+
+    height: auto;
+    width: auto;
+}
+
+#component{
+    display:flex;
+    flex-wrap: wrap;
+    flex-grow:3;
+}
+
+.component-card {
+    width:33%;
+    min-width: 250px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin:0 0.5% 1% 0;
+    display:inline-block
+}
+
+.component-card:nth-of-type(3n){
+    margin-right:0;
+}
+.component-card img {
+    width: 100%;
+    min-height:100%;
+    transition:all 0.9s
+}
+
+.component-card:hover img{
+    transform:scale(1.2,1.2)
+}
+
+.component-data {
+    position: absolute;
+    bottom: 5%;
+    background: #fff;
+    text-align:center;
+    width: 90%;
+    height: 80px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px 5%;
+    box-sizing: border-box;
+    opacity: 0.8;
+    transition: all 0.4s
+}
+.component-card:hover .component-data {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    opacity: 0.9;
+    padding:90px 10%
+}
+.component-data h2 {
+    margin: 0 0 5px 0;
+    transition:color 0.4s
+}
+.component-data p {
+    opacity: 0;
+    text-align:justify;
+    transition: all 0.2s
+}
+
+.component-card:hover .component-data p,.component-card:hover .component-data a {
+    opacity: 1
+}
+.component-data a{
+    color:#333;
+    text-decoration:none;
+    padding:20px;
+    opacity:0
+}
+.component-data a:hover,.component-card:hover h2{
+    color:#38c
+}
+
+@media (max-width:799px){
+    .component-card {width:100%;margin-right:0}
+}
+
+  
+  
+  
+  
+  

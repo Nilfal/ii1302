@@ -1,9 +1,11 @@
-.data {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+.data-information{
+    font-family: 'Nunito', sans-serif;
     text-align: center;
-    color:#b46e35;
+    color: black;
     background-color: rgb(243, 241, 241);
     opacity: 0.8;
-  
 }
 .chart-wrapper, canvas {
     margin: auto;

@@ -1,10 +1,6 @@
 import React from 'react';
-import {Link} from 'react-scroll';
+import { Link } from 'react-router-dom';
 import '../css/footer.css';
-
-import { FaGithub } from 'react-icons/fa';
-import { FaFacebookF } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
 
 
 function Footer() {
@@ -31,7 +27,11 @@ function Footer() {
                 <div className='child'>
                     <h6>Quick links</h6>
                     <ul className='footer-links'>
-                        <li><Link to = "home" spy={true} smooth={true}><span></span>Home</Link></li>
+                        <li><Link to = "/home"><span>Home</span></Link></li>
+                        <li><Link to = "/data"><span>Data</span></Link></li>
+                        <li><Link to = "/component"><span>Components</span></Link></li>
+                        <li><Link to = "/about"><span>About Us</span></Link></li>
+                        <li><Link to = "/info"><span>Information</span></Link></li>
                     </ul>
                 </div>
             </div>
@@ -41,13 +41,6 @@ function Footer() {
             <div className='row'>
                 <div className='child'>
                     <p className='copyright-text'> Copyright &copy; 2022 All rights by Group 11</p>
-                </div>
-                <div className='child'>
-                    <ul className='frame'>
-                        <li className='btn'><FaGithub/></li>
-                        <li className='btn'><FaFacebookF/></li>
-                        <li className='btn'><FaLinkedinIn/></li>
-                    </ul>
                 </div>
             </div>
         </div>
