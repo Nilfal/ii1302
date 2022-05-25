@@ -2,12 +2,13 @@
 import React from "react";
 import FirebaseApp from "../config/firebase";
 import "../css/data.css";
-import { getDatabase, ref, onValue, DataSnapshot } from "firebase/database";
+import { getDatabase, ref, onValue, DataSnapshot ,set} from "firebase/database";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
 
 const database = getDatabase(FirebaseApp);
+const x = new Date();
 
 function Data() {
 
@@ -16,8 +17,33 @@ function Data() {
   const [ddataset, setDataset] = React.useState([]);
   const [lableset, setLableset] = React.useState([]);
 
+  const [readData, setReadData] = React.useState();
+
   let tst = new Array(0);
   let i = 0;
+
+  function writeUserData(x , name){
+     set(ref(database,'history/'+x),{
+       data:name
+     })
+  }
+
+  function readUserData()
+  {
+    const soundValueRef = ref(database, "history/");
+
+    soundValueRef.onValue('value', (snapshot) => {
+      console.log(snapshot.val);
+    })
+
+    /*onValue(soundValueRef, (snapshot) => {
+      const datas = snapshot.val();
+      // console.log(data);
+      //setDataset(datas);
+
+      setReadData(datas);
+    });*/
+  }
 
   React.useEffect(() => {
     const intervall = setInterval(() => {
@@ -26,6 +52,9 @@ function Data() {
         const datas = snapshot.val();
         // console.log(data);
         setDataset(datas);
+
+
+        console.log(ddataset)
 
         const len = ddataset.length;
         setLableset(Array.from(Array(len).keys()));
@@ -60,9 +89,15 @@ function Data() {
     ],
   };
 
-  //console.log(chart());
+  function setup()
+  {
+    readUserData();
+  }
+
+  React.useState(setup, []);
+
   return (
-    <div className="data-information">
+    <div className="data-info">
       <h4>Decibel Sound Chart</h4>
 
       <div> Current sound : {ddataset[ddataset.length - 1]}</div>
@@ -78,7 +113,14 @@ function Data() {
 
       
       </div>
+      <button onClick={()=> {writeUserData(x,{ddataset})}}>Save?</button>
+
+      {console.log("PROLOG " + readData)}
+    
     </div>
+
+
+  
   );
 
 }

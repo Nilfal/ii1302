@@ -6,7 +6,8 @@ function DataPresenter(props) {
 	return (
 		<div>
 			
-			<Historik />
+			<Data />
+			<Historik/>
 		</div>
 	);
 }
