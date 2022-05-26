@@ -8,6 +8,35 @@ import Chart from "chart.js/auto";
 
 const database = getDatabase(FirebaseApp);
 
+
+
+
+function graph(dat){
+  
+//console.log(dat.length)
+ var lab = [];
+ lab =  Array.from(Array(dat.length).keys())
+ 
+  var state = {
+    labels: lab,
+    datasets: [
+      {
+        label: "Sound level",
+        fill: false,
+        lineTension: 0.1,
+        backgroundColor: "rgba(75,192,192,1)",
+        borderColor: "rgb(79, 192, 192)",
+        borderWidth: 4,
+        data: dat,
+      },
+    ],
+  };
+  return  state
+  
+}
+
+
+
 function convertDataToArray(data) {
   const entries = Object.entries(data);
 
@@ -26,11 +55,15 @@ function Historik() {
       const soundValueRef = ref(database, "history");
       onValue(soundValueRef, (snapshot) => {
         setDataset(convertDataToArray(snapshot.val()))
+
+        
       });
     }, 3000);
 
     return () => clearInterval(intervall);
   }, []);
+  
+  
 
 
   // React.useEffect(() => {
@@ -57,10 +90,15 @@ function Historik() {
       {/* <button onClick={()=> {listItems({ddataset})}}>History</button> */}
 
       <ul>
+
+        {ddataset.map(({timestamp, data}) => (<li>{timestamp} - {data.join(" ")}
         
-        {ddataset.map(({timestamp, data}) => (<li>{timestamp} - {data.join(", ")}</li>))}
-      </ul>
       
+        <Line data={graph(data)}> </Line>
+      
+        </li>))}
+      </ul>
+        
       
 
     </div>
