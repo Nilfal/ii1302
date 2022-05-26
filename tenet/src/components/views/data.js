@@ -1,14 +1,20 @@
 
 import React from "react";
 import FirebaseApp from "../config/firebase";
-import "../css/data.css";
-import { getDatabase, ref, onValue, DataSnapshot ,set} from "firebase/database";
+import "../css/informationpage.css";
+import { getDatabase, ref, onValue, DataSnapshot, set } from "firebase/database";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
+const x = new Date();
 
 const database = getDatabase(FirebaseApp);
-const x = new Date();
+
+function writeUserData(x , name){
+  set(ref(database,'history/'+x),{
+    data:name
+  })
+}
 
 function Data() {
 
@@ -17,25 +23,8 @@ function Data() {
   const [ddataset, setDataset] = React.useState([]);
   const [lableset, setLableset] = React.useState([]);
 
-
-
+  let tst = new Array(0);
   let i = 0;
-
-  
-
-  
-  function writeUserData(x , name){
-    set(ref(database,'history/'+x),{
-      data:name
-    })
- }
-    
-       //console.log(data);
-      //setDataset(datas);
-
-      //setReadData(datas);
-    
-  
 
   React.useEffect(() => {
     const intervall = setInterval(() => {
@@ -45,19 +34,22 @@ function Data() {
         // console.log(data);
         setDataset(datas);
 
-
-        console.log(ddataset)
-
-        const len = ddataset;
+        const len = ddataset.length;
         setLableset(Array.from(Array(len).keys()));
       });
     }, 3000);
     return () => clearInterval(intervall);
   }, [ddataset, lableset]);
 
-  
+  while (tst.length < ddataset.length) {
+    tst[i++] = ddataset[i];
+  }
 
-  
+  const test = {
+    options: {
+      responsive: true,
+    },
+  };
 
   const state = {
     labels: lableset,
@@ -70,25 +62,22 @@ function Data() {
         backgroundColor: "rgba(75,192,192,1)",
         borderColor: "rgb(79, 192, 192)",
         borderWidth: 4,
-        
+        data: tst,
       },
     ],
   };
 
-  
-
-  
-
+  //console.log(chart());
   return (
     <div className="data-info">
       <h4>Decibel Sound Chart</h4>
 
-      <div> Current sound : {ddataset}</div>
+      <div> Curret sound : {ddataset[ddataset.length - 1]}</div>
 
       <div id="chart-wrapper">
         <Line
           id="test"
-          
+          options={test}
           data={state}
           height={600}
           width={900}
@@ -97,15 +86,9 @@ function Data() {
       
       </div>
       <button onClick={()=> {writeUserData(x,{ddataset})}}>Save?</button>
-
-      
-    
     </div>
-
-
-
   );
-  }
 
+}
 
 export default Data;
