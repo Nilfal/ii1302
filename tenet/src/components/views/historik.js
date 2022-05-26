@@ -2,23 +2,16 @@
 import React from "react";
 import FirebaseApp from "../config/firebase";
 import "../css/data.css";
-import { getDatabase, ref, onValue, DataSnapshot, set } from "firebase/database";
+import { getDatabase, ref, onValue, DataSnapshot ,set, get, child} from "firebase/database";
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js/auto";
 
-
-const item = {
-	item1: 1,
-	item2:2
-}
-
 const database = getDatabase(FirebaseApp);
-const x  = new Date();
 
+function convertDataToArray(data) {
+  const entries = Object.entries(data);
 
-function writeUserData(userId, name) {
-	//console.log(userId);
-	set(ref(database, 'history/' + userId), {data: name});
+  return entries.map(([timestamp, {data}]) => ({timestamp, data: data.ddataset}))
 }
 
 function Historik() {
@@ -26,71 +19,55 @@ function Historik() {
   //ddataset == y
   //LABLE == X
   const [ddataset, setDataset] = React.useState([]);
-  const [lableset, setLableset] = React.useState([]);
-
-  let i = 0;
+  // const [lableset, setLableset] = React.useState([]);
 
   React.useEffect(() => {
     const intervall = setInterval(() => {
       const soundValueRef = ref(database, "history");
       onValue(soundValueRef, (snapshot) => {
-        const datas = snapshot.val();
-        // console.log(data);
-        setDataset(datas);
-
-        const len = ddataset.length;
-        setLableset(Array.from(Array(len).keys()));
+        setDataset(convertDataToArray(snapshot.val()))
       });
     }, 3000);
+
     return () => clearInterval(intervall);
-  }, [ddataset, lableset]);
+  }, []);
 
-  const test = {
-    options: {
-      responsive: true,
-    },
-  };
 
-  const state = {
-    labels: lableset,
+  // React.useEffect(() => {
+  //   const dbRef = ref(database);
+  //   get(child(dbRef, 'historik')).then((snapshot) => {
+  //     console.log("exist", snapshot.val())
+  //     if(snapshot.exists())
+  //       setDataset(convertDataToArray(snapshot.val()))
+  //   })
+  // }, [])
 
-    datasets: [
-      {
-        label: "Sound level",
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: "rgba(75,192,192,1)",
-        borderColor: "rgb(79, 192, 192)",
-        borderWidth: 4,
-      },
-    ],
-  };
+
+// const numbers = ddataset;
+// console.log(JSON.stringify(ddataset))
+// listItems = ddataset ? ddataset.map((d) =>
+//   <li>{d}</li>
+// ) : [];
 
   //console.log(chart());
   return (
-    <div className="data-information-history">
+    <div className="data-info">
       <h4>Decibel Sound Chart</h4>
 
+      {/* <button onClick={()=> {listItems({ddataset})}}>History</button> */}
+
+      <ul>
+        
+        {ddataset.map(({timestamp, data}) => (<li>{timestamp} - {data.join(", ")}</li>))}
+      </ul>
+      
       
 
-      <div id="chart-wrapper">
-        <Line
-          id="test"
-          options={test}
-          data={state}
-          height={600}
-          width={900}
-        ></Line>
-			
-			{/* Byt ut item till faktisk data */}
-			<button onClick={()=> {writeUserData(x,{item})}}>Save?</button>
-      </div>
     </div>
-
+   
   );
 
-	
-
 }
+
 
 export default Historik;
