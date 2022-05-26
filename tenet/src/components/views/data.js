@@ -17,33 +17,25 @@ function Data() {
   const [ddataset, setDataset] = React.useState([]);
   const [lableset, setLableset] = React.useState([]);
 
-  const [readData, setReadData] = React.useState();
 
-  let tst = new Array(0);
+
   let i = 0;
 
+  
+
+  
   function writeUserData(x , name){
-     set(ref(database,'history/'+x),{
-       data:name
-     })
-  }
-
-  function readUserData()
-  {
-    const soundValueRef = ref(database, "history/");
-
-    soundValueRef.onValue('value', (snapshot) => {
-      console.log(snapshot.val);
+    set(ref(database,'history/'+x),{
+      data:name
     })
-
-    /*onValue(soundValueRef, (snapshot) => {
-      const datas = snapshot.val();
-      // console.log(data);
+ }
+    
+       //console.log(data);
       //setDataset(datas);
 
-      setReadData(datas);
-    });*/
-  }
+      //setReadData(datas);
+    
+  
 
   React.useEffect(() => {
     const intervall = setInterval(() => {
@@ -56,22 +48,16 @@ function Data() {
 
         console.log(ddataset)
 
-        const len = ddataset.length;
+        const len = ddataset;
         setLableset(Array.from(Array(len).keys()));
       });
     }, 3000);
     return () => clearInterval(intervall);
   }, [ddataset, lableset]);
 
-  while (tst.length < ddataset.length) {
-    tst[i++] = ddataset[i];
-  }
+  
 
-  const test = {
-    options: {
-      responsive: true,
-    },
-  };
+  
 
   const state = {
     labels: lableset,
@@ -84,28 +70,25 @@ function Data() {
         backgroundColor: "rgba(75,192,192,1)",
         borderColor: "rgb(79, 192, 192)",
         borderWidth: 4,
-        data: tst,
+        
       },
     ],
   };
 
-  function setup()
-  {
-    readUserData();
-  }
+  
 
-  React.useState(setup, []);
+  
 
   return (
     <div className="data-info">
       <h4>Decibel Sound Chart</h4>
 
-      <div> Current sound : {ddataset[ddataset.length - 1]}</div>
+      <div> Current sound : {ddataset}</div>
 
       <div id="chart-wrapper">
         <Line
           id="test"
-          options={test}
+          
           data={state}
           height={600}
           width={900}
@@ -115,14 +98,14 @@ function Data() {
       </div>
       <button onClick={()=> {writeUserData(x,{ddataset})}}>Save?</button>
 
-      {console.log("PROLOG " + readData)}
+      
     
     </div>
 
 
-  
-  );
 
-}
+  );
+  }
+
 
 export default Data;
