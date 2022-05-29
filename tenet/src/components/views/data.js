@@ -86,6 +86,7 @@ function Data() {
       
       </div>
       <button onClick={()=> {writeUserData(x,{ddataset})}}>Save?</button>
+      <button onClick ={()=> {light()}}>IT IS TOO LOUD</button>
     </div>
   );
 
