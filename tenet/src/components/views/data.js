@@ -10,6 +10,22 @@ const x = new Date();
 
 const database = getDatabase(FirebaseApp);
 
+
+ function isLight(){
+  const test = ref(database, "light");
+
+
+ }
+
+
+function light(){
+  set(ref(database,'light/'),{
+    mode:true
+  })
+console.log(isLight())
+
+}
+
 function writeUserData(x , name){
   set(ref(database,'history/'+x),{
     data:name
